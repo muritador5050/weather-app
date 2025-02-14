@@ -5,7 +5,8 @@ import './App.css';
 export function App() {
   const [weather, setWeather] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [region, setRegion] = useState('Mecca');
+  const [error, setError] = useState(null);
+  const [region, setRegion] = useState('san diego');
   const [changeLocation, setChangeLocation] = useState(false);
 
   //Local Time
@@ -25,7 +26,6 @@ export function App() {
     };
     try {
       const response = await axios.request(options);
-      console.log(response.data);
       const result = response.data;
       setWeather(result);
     } catch (error) {
@@ -34,7 +34,7 @@ export function App() {
     setIsLoading(false);
   }
 
-  function setCountry() {
+  async function setCountry() {
     const options = {
       method: 'POST',
       url: `http://api.weatherapi.com/v1/current.json?q=${region}&aqi=no`,
@@ -43,10 +43,18 @@ export function App() {
         'Access-Control-Allow-Origin': '*',
       },
     };
-    const response = axios
-      .request(options)
-      .then((response) => setWeather(response.data));
-    console.log(response.data);
+    setError(null);
+    try {
+      const req = await axios.request(options);
+      const response = req.data;
+      setWeather(response);
+    } catch (err) {
+      console.error(err);
+      setError(`please enter a valid country/city name`);
+      setChangeLocation(true);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   const handleChangeLocation = () => {
@@ -62,7 +70,6 @@ export function App() {
     <>
       {isLoading && <h3 style={{ textAlign: 'center' }}>Loading...</h3>}
       <div className='container'>
-        {/* <h2 className='weather-template'>Mini Weather App</h2> */}
         {weather && (
           <>
             <div className='weather-blue-template'>
@@ -83,6 +90,7 @@ export function App() {
                 <ul>
                   <li>
                     <img
+                      style={{ width: '30%' }}
                       className='icon'
                       src={weather.current.condition.icon}
                       alt='icon'
@@ -121,6 +129,11 @@ export function App() {
               </ul>
               {changeLocation ? (
                 <div className='form-div'>
+                  {error && (
+                    <small style={{ color: 'red', fontSize: '1rem' }}>
+                      {error}
+                    </small>
+                  )}
                   <input
                     className='text-input'
                     type='text'
@@ -136,7 +149,7 @@ export function App() {
               )}
               <button
                 className='change-location-btn'
-                onClick={() => setChangeLocation(true)}
+                onClick={() => setChangeLocation(!changeLocation)}
               >
                 Change Location
               </button>
