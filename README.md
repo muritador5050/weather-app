@@ -1,1 +1,1 @@
-# welcome to my mini weather app page . this page is a single page app which u can check the current weather condition of a city or an area by simple click on the change location button and it will provide you an input to search for various city.
+
