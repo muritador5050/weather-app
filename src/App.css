@@ -12,13 +12,14 @@ body {
 }
 
 .container {
-  /* border: 5px solid yellowgreen; */
+  border: 5px solid yellowgreen;
 }
 
 .weather-blue-template {
   display: flex;
   flex-direction: column;
-  color: white;
+  align-items: center;
+  color: black;
   gap: 2em;
   font-size: calc(3rem - 30px);
   background: linear-gradient(to right, blue, lightblue);
@@ -115,6 +116,7 @@ ul li {
   .weather-blue-template {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    align-items: initial;
   }
   .weather-black-template {
     border-top-right-radius: 50px;
@@ -139,5 +141,3 @@ ul li {
     font-size: 1.2rem;
   }
 }
-
-/* welcome to my mini weather app page . this page is a single page app which u can check the current weather condition of a city or an area by simple click on the change location button and it will provide you an input to search for various city. */
