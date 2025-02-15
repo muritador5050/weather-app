@@ -26,6 +26,11 @@ ul li {
   list-style: none;
 }
 
+.container {
+  min-height: fit-content;
+  border: 2px solid blue;
+}
+
 .weather-blue-template {
   background: var(--futuristic-neon);
   font-size: calc(0.5rem * 2);
@@ -40,7 +45,7 @@ ul li {
   background: black;
   color: white;
   font-size: calc(0.5rem * 2);
-  padding: 2.5em 1.5em;
+  padding: 3em 1.5em;
 }
 
 .list-condition + .list-condition {
