@@ -18,7 +18,7 @@ export function App() {
     setIsLoading(true);
     const options = {
       method: 'GET',
-      url: `http://api.weatherapi.com/v1/current.json?q=${region}&aqi=no`,
+      url: `https://api.weatherapi.com/v1/current.json?q=${region}&aqi=no`,
       headers: {
         key: 'b4d344549f2140059e4125539230405',
         'Access-Control-Allow-Origin': '*',
@@ -37,7 +37,7 @@ export function App() {
   async function setCountry() {
     const options = {
       method: 'POST',
-      url: `http://api.weatherapi.com/v1/current.json?q=${region}&aqi=no`,
+      url: `https://api.weatherapi.com/v1/current.json?q=${region}&aqi=no`,
       headers: {
         key: 'b4d344549f2140059e4125539230405',
         'Access-Control-Allow-Origin': '*',
