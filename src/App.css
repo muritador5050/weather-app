@@ -71,6 +71,7 @@ ul li {
   font-size: 1.5rem;
   background: var(--futuristic-neon);
   color: white;
+  border: none;
   cursor: pointer;
   bottom: 0;
   right: 5px;
@@ -101,7 +102,7 @@ ul li {
   .weather-blue-template,
   .weather-black-template {
     width: 30%;
-    min-height: 700px;
+    min-height: 500px;
   }
   .weather-blue-template {
     border-top-left-radius: 50px;
@@ -110,9 +111,5 @@ ul li {
   .weather-black-template {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-  }
-
-  .form-div {
-    margin-top: 3em;
   }
 }
