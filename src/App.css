@@ -28,13 +28,13 @@ ul li {
 
 .container {
   min-height: fit-content;
-  border: 2px solid blue;
 }
 
 .weather-blue-template {
   background: var(--futuristic-neon);
   font-size: calc(0.5rem * 2);
   padding: 1.5em 1em;
+  padding-bottom: 2em;
 }
 
 .condition {
@@ -46,6 +46,7 @@ ul li {
   color: white;
   font-size: calc(0.5rem * 2);
   padding: 3em 1.5em;
+  padding-bottom: 3.5em;
 }
 
 .list-condition + .list-condition {
