@@ -3,144 +3,116 @@
 ::after {
   box-sizing: border-box;
   margin: 0;
-}
-html,
-body {
-  background: #00246b;
-  font-size: 1.3rem;
   padding: 0;
-  margin: 0;
+}
+:root {
+  --vibrant: linear-gradient(to right, #ff7e5f, #feb47b);
+  --ocean-blue: linear-gradient(to right, #00c6ff, #0072ff);
+  --puple-pink: linear-gradient(to right, #8e44ad, #e056fd);
+  --nature-green: linear-gradient(to right, #11998e, #38ef7d);
+  --futuristic-neon: linear-gradient(to right, #ff00ff, #00ffff);
+  --red-orange: linear-gradient(to right, #ff416c, #ff4b2b);
 }
 
-.container {
-  border: 5px solid yellowgreen;
+body {
+  font-size: 1.3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+ul li {
+  list-style: none;
 }
 
 .weather-blue-template {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  gap: 2em;
-  font-size: calc(3rem - 30px);
-  background: linear-gradient(to right, blue, lightblue);
-  border-top-right-radius: 50px;
-  padding: 2.5em;
-  padding-bottom: 5em;
+  background: var(--futuristic-neon);
+  font-size: calc(0.95rem * 2);
+  padding: 1.5em 1em;
 }
+
+.condition {
+  margin-top: 2em;
+}
+
 .weather-black-template {
-  display: block;
-  background-color: black;
-  border-bottom-left-radius: 50px;
+  background: black;
   color: white;
-  font-size: calc(3rem - 30px);
-  padding: 2.5em;
-  padding-bottom: 5em;
+  font-size: calc(0.6rem * 2);
+  padding: 2.5em 1.5em;
 }
-.weather-black-template ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding: 20px;
-}
-.location ul li,
-.condition ul li {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
+
+.list-condition + .list-condition {
+  margin-top: 1em;
 }
 .list-condition {
   display: flex;
   justify-content: space-between;
 }
-.change-location-btn {
-  background: linear-gradient(to right, blue, lightblue);
-  color: white;
-  font-size: calc(2rem - 10px);
-  padding: 1em 2em;
+
+.form-div {
+  position: relative;
+  margin-top: 2.5em;
+}
+.text-input {
   width: 100%;
-  cursor: pointer;
+  min-height: 50px;
   border-radius: 10px;
-  border: none;
-  margin-top: 2em;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 0.5em;
+}
+.go-button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: var(--futuristic-neon);
+  color: white;
+  cursor: pointer;
+  bottom: 0;
+  right: 5px;
 }
 .change-location-btn:hover,
 .go-button:hover {
   opacity: 0.5;
 }
 
-.form-div {
-  position: relative;
-  margin-top: 1em;
-}
-.text-input {
+.change-location-btn {
+  background: var(--futuristic-neon);
+  color: white;
+  font-size: calc(2rem - 10px);
+  padding: 0.5em;
   width: 100%;
-  min-height: 100px;
+  cursor: pointer;
   border-radius: 10px;
   border: none;
-  margin-top: 10px;
-  padding: 0.5em;
-  font-size: calc(3rem - 30px);
+  margin-top: 2em;
 }
 
-.go-button {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  font-size: 1.7rem;
-  font-style: oblique;
-  background: linear-gradient(to right, blue, lightblue);
-  color: white;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-
-ul li {
-  list-style: none;
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .container {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .weather-blue-template,
   .weather-black-template {
-    width: 40%;
-    height: 100vh;
-    padding: 1.5em;
-    font-size: 1.5rem;
-    border-radius: 0px;
+    width: 30%;
+    min-height: 700px;
   }
   .weather-blue-template {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    align-items: initial;
   }
   .weather-black-template {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
   }
-  .change-location-btn {
-    font-size: calc(2rem - 20px);
-    padding: 1em;
-    margin-top: 3em;
-  }
+
   .form-div {
     margin-top: 3em;
-  }
-  .text-input {
-    min-height: 50px;
-    padding: 0.5em;
-    font-size: calc(3rem - 45px);
-  }
-
-  .go-button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
   }
 }

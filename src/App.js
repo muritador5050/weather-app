@@ -82,7 +82,9 @@ export function App() {
                   <li>{weather.location.localtime}</li>
 
                   <li>
-                    {weather.location.name}/{weather.location.country}
+                    {weather.location.name}
+                    <br />
+                    {weather.location.country}
                   </li>
                 </ul>
               </div>
@@ -112,7 +114,7 @@ export function App() {
             <div className='weather-black-template'>
               <ul>
                 <li className='list-condition'>
-                  <strong>HUMIDITY</strong> {weather.current.humidity}
+                  <strong>HUMIDITY</strong> {weather.current.humidity}%
                 </li>
                 <li className='list-condition'>
                   <strong>WIND_DIR</strong>
