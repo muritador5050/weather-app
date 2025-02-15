@@ -28,7 +28,7 @@ ul li {
 
 .weather-blue-template {
   background: var(--futuristic-neon);
-  font-size: calc(0.95rem * 2);
+  font-size: calc(0.65rem * 2);
   padding: 1.5em 1em;
 }
 
@@ -57,7 +57,7 @@ ul li {
 }
 .text-input {
   width: 100%;
-  min-height: 50px;
+  min-height: 55px;
   border-radius: 10px;
   outline: none;
   font-size: 1.2rem;
@@ -73,7 +73,7 @@ ul li {
   color: white;
   border: none;
   cursor: pointer;
-  bottom: 0;
+  bottom: 2px;
   right: 5px;
 }
 .change-location-btn:hover,
@@ -102,7 +102,7 @@ ul li {
   .weather-blue-template,
   .weather-black-template {
     width: 30%;
-    min-height: 500px;
+    min-height: 400px;
   }
   .weather-blue-template {
     border-top-left-radius: 50px;
