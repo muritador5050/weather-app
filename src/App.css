@@ -28,18 +28,18 @@ ul li {
 
 .weather-blue-template {
   background: var(--futuristic-neon);
-  font-size: calc(0.65rem * 2);
+  font-size: calc(0.5rem * 2);
   padding: 1.5em 1em;
 }
 
 .condition {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .weather-black-template {
   background: black;
   color: white;
-  font-size: calc(0.6rem * 2);
+  font-size: calc(0.5rem * 2);
   padding: 2.5em 1.5em;
 }
 
@@ -102,7 +102,8 @@ ul li {
   .weather-blue-template,
   .weather-black-template {
     width: 30%;
-    min-height: 400px;
+    min-height: 500px;
+    font-size: calc(0.6rem * 2);
   }
   .weather-blue-template {
     border-top-left-radius: 50px;
