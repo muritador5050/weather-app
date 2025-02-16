@@ -6,12 +6,7 @@
   padding: 0;
 }
 :root {
-  --vibrant: linear-gradient(to right, #ff7e5f, #feb47b);
-  --ocean-blue: linear-gradient(to right, #00c6ff, #0072ff);
-  --puple-pink: linear-gradient(to right, #8e44ad, #e056fd);
-  --nature-green: linear-gradient(to right, #11998e, #38ef7d);
   --futuristic-neon: linear-gradient(to right, #ff00ff, #00ffff);
-  --red-orange: linear-gradient(to right, #ff416c, #ff4b2b);
 }
 
 body {
@@ -30,7 +25,7 @@ ul li {
 
 .weather-blue-template {
   background: var(--futuristic-neon);
-  font-size: calc(0.5rem * 2);
+  font-size: 1.5rem;
   padding: 1.5em 1em;
 }
 
@@ -41,7 +36,7 @@ ul li {
 .weather-black-template {
   background: black;
   color: white;
-  font-size: calc(0.6rem * 2);
+  font-size: 1.5rem;
   padding: 3em 1.5em;
 }
 
