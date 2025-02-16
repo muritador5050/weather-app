@@ -106,7 +106,7 @@ ul li {
   .container {
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 70px;
   }
 
   .weather-blue-template,
