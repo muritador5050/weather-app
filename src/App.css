@@ -118,6 +118,7 @@ ul li {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     padding-left: 3em;
+    padding-top: 3em;
   }
   .weather-black-template {
     border-top-right-radius: 50px;
