@@ -24,6 +24,11 @@ ul li {
   list-style: none;
 }
 
+.loading {
+  text-align: center;
+  color: white;
+}
+
 .weather-blue-template {
   background: var(--futuristic-neon);
   font-size: calc(0.5rem * 2);
@@ -92,9 +97,16 @@ ul li {
 }
 
 @media (min-width: 900px) {
+  body {
+    background-color: white;
+  }
+  .loading {
+    color: black;
+  }
   .container {
     display: flex;
     justify-content: center;
+    margin-top: 150px;
   }
 
   .weather-blue-template,

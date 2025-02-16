@@ -68,9 +68,7 @@ export function App() {
 
   return (
     <div className='container'>
-      {isLoading && (
-        <h3 style={{ textAlign: 'center', color: 'white' }}>Loading...</h3>
-      )}
+      {isLoading && <h3 className='loading'>Loading...</h3>}
       <>
         {weather && (
           <>
