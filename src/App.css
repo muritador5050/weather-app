@@ -17,6 +17,7 @@
 body {
   font-size: 1.3rem;
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 img {
@@ -26,13 +27,9 @@ ul li {
   list-style: none;
 }
 
-.container {
-  min-height: fit-content;
-}
-
 .weather-blue-template {
   background: var(--futuristic-neon);
-  font-size: calc(0.5rem * 2);
+  font-size: calc(0.55rem * 2);
   padding: 1.5em 1em;
   padding-bottom: 2em;
 }
@@ -44,9 +41,8 @@ ul li {
 .weather-black-template {
   background: black;
   color: white;
-  font-size: calc(0.5rem * 2);
-  padding: 3em 1.5em;
-  padding-bottom: 3.5em;
+  font-size: calc(0.55rem * 2);
+  padding: 3.5em 1.5em;
 }
 
 .list-condition + .list-condition {
