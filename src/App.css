@@ -25,7 +25,7 @@ ul li {
 
 .weather-blue-template {
   background: var(--futuristic-neon);
-  font-size: 1.35rem;
+  font-size: calc(0.5rem * 2);
   padding: 1.5em 1em;
 }
 
@@ -37,7 +37,7 @@ ul li {
   background: black;
   color: white;
   font-size: calc(0.5rem * 2);
-  padding: 3em 1.5em;
+  padding: 3em 1.5em 5em 1.5em;
 }
 
 .list-condition + .list-condition {
@@ -100,11 +100,11 @@ ul li {
   .weather-black-template {
     width: 30%;
     min-height: 500px;
-    font-size: calc(0.6rem * 2);
   }
   .weather-blue-template {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    padding-left: 3em;
   }
   .weather-black-template {
     border-top-right-radius: 50px;
