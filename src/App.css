@@ -37,7 +37,7 @@ ul li {
   background: black;
   color: white;
   font-size: calc(0.5rem * 2);
-  padding: 3em 1.5em 5.5em 1.5em;
+  padding: 3em 1.5em 6em 1.5em;
 }
 
 .list-condition + .list-condition {
