@@ -67,9 +67,9 @@ export function App() {
   }, []);
 
   return (
-    <>
+    <div className='container'>
       {isLoading && <h3 style={{ textAlign: 'center' }}>Loading...</h3>}
-      <div className='container'>
+      <>
         {weather && (
           <>
             <div className='weather-blue-template'>
@@ -158,8 +158,8 @@ export function App() {
             </div>
           </>
         )}
-      </div>
-    </>
+      </>
+    </div>
   );
 }
 
